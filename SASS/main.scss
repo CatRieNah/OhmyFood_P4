@@ -1,9 +1,9 @@
 *{
     margin: 0;
-}
-
-body{
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
 }
 
 header{
@@ -12,5 +12,26 @@ header{
         width: 200px;
         margin: auto;
         padding: 15px;
+    }
+}
+
+/* Location*/
+.location{
+    background-color: #eaeaea;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.25), 0 -2px 4px rgba(0,0,0,.15);
+
+    & .fa-location-dot,button{
+        color: #353535;
+        background-color: #eaeaea;
+    }
+
+    & button{
+        font-weight: 500;
+        border: none;
     }
 }
