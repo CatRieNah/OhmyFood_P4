@@ -9,7 +9,7 @@ $main-third-color:#99E2D0;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
 }
-
+    
 .section-title{
     font-size: 24px;
     font-weight: 700;
@@ -70,3 +70,53 @@ header{
         cursor: pointer;
     }
 }
+
+/*Section Function*/
+.function{
+    margin: 35px;
+
+    & .section-title{
+        margin-bottom: 15px;
+    }
+
+    & ol{
+        padding-left: 0;
+        list-style-type: none; /* Annule la numérotation par défaut de la liste*/
+        counter-reset: number; /* Reinitialiser le compteur au début de la liste*/
+    }
+}
+
+ol{
+    li{
+        margin-bottom: 15px;
+        height: 70px;
+        border-radius: 20px;
+        background-color: $bg-color;
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        padding: 25px;
+        counter-increment: number; /* incrementer le compteur pour chaque élément*/
+        position:relative; /* nécessaire pour positionner le pseudo-élement */
+
+        &::before{
+            /* ::before : Ajoute du contenu avant le contenu de l'élément sélectionné. */
+            content: counter(number);
+            position: absolute;
+            left: -5px;
+            color: #FFF;
+            background-color: $main-primary-color;
+            border-radius: 50%;
+            padding: 3px;
+        }
+       
+        & .fa-store{
+            color:$main-primary-color
+        }
+
+        & h3{
+            font-weight: 500;
+        }
+    }
+}
+

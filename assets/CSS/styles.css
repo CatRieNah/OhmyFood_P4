@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   box-sizing: border-box;
@@ -58,6 +59,48 @@ header img {
   padding: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+/*Section Function*/
+.function {
+  margin: 35px;
+}
+.function .section-title {
+  margin-bottom: 15px;
+}
+.function ol {
+  padding-left: 0;
+  list-style-type: none; /* Annule la numérotation par défaut de la liste*/
+  counter-reset: number; /* Reinitialiser le compteur au début de la liste*/
+}
+
+ol li {
+  margin-bottom: 15px;
+  height: 70px;
+  border-radius: 20px;
+  background-color: #F6F6F6;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 25px;
+  counter-increment: number; /* incrementer le compteur pour chaque élément*/
+  position: relative; /* nécessaire pour positionner le pseudo-élement */
+}
+ol li::before {
+  /* ::before : Ajoute du contenu avant le contenu de l'élément sélectionné. */
+  content: counter(number);
+  position: absolute;
+  left: -5px;
+  color: #FFF;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 3px;
+}
+ol li .fa-store {
+  color: #9356DC;
+}
+ol li h3 {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */
