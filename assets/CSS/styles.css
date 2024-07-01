@@ -93,6 +93,11 @@ ol li::before {
   left: -5px;
   color: #FFF;
   background-color: #9356DC;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
   padding: 3px;
 }
