@@ -97,10 +97,10 @@ ol{
         gap: 17px;
         padding: 25px;
         counter-increment: number; /* incrementer le compteur pour chaque élément*/
-        position:relative; /* nécessaire pour positionner le pseudo-élement */
+        position:relative; /* nécessaire pour positionner le pseudo-élement qui cherche son élément parent quand on lui positonne en valeur absolue*/
 
         &::before{
-            /* ::before : Ajoute du contenu avant le contenu de l'élément sélectionné. */
+            /* ::before : Ajout un contenu avant le contenu de l'élément sélectionné. */
             content: counter(number);
             position: absolute;
             left: -5px;
