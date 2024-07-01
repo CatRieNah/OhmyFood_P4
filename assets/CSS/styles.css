@@ -170,4 +170,30 @@ ol li h3 {
   font-size: 22px;
 }
 
+/*Footer*/
+footer {
+  background-color: #353535;
+  padding: 35px;
+}
+footer .logo-footer {
+  font-family: "Shrikhand", serif;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  color: #FFF;
+  margin-bottom: 15px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+  color: #FFF;
+  font-weight: 500;
+}
+footer ul li {
+  margin-bottom: 15px;
+}
+footer ul li i {
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=styles.css.map */
