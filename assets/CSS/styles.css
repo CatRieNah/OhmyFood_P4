@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -5,15 +6,13 @@
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: 700;
 }
 
-/*Header*/
-header img {
-  display: block;
-  width: 175px;
-  margin: 15px auto;
+h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 a {
@@ -33,6 +32,13 @@ a {
   margin-top: 20px;
 }
 
+/*Header*/
+header img {
+  display: block;
+  width: 175px;
+  margin: 15px auto;
+}
+
 /****Location***/
 .location {
   background-color: #eaeaea;
@@ -48,6 +54,7 @@ a {
   border: none;
   background-color: #eaeaea;
   font-size: 14px;
+  font-weight: 500;
 }
 
 /* Intro*/
@@ -64,6 +71,55 @@ a {
   font-size: 18px;
   color: #353535;
   font-weight: 300;
+}
+
+/***Fonctionnement*/
+.steps {
+  padding: 50px 20px;
+}
+.steps ol {
+  list-style: none; /* anule la numérotation par défaut de la balise ol*/
+  counter-reset: steps-counter; /* Réinitialiser le compteur à 0. Cela permet de commencer la numérotation à partir de 1*/
+  padding: 0;
+}
+
+.steps .list-item {
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 70px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  position: relative;
+}
+.steps .list-item::before {
+  counter-increment: steps-counter; /* Incrementer le compteur de 1 pour chaque élément de la liste*/
+  content: counter(steps-counter);
+  position: absolute;
+  left: -10px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #9356DC;
+  color: #fff;
+  border-radius: 50%;
+}
+.steps .list-item__icon {
+  color: #7e7e7e;
+}
+.steps .list-item__icon--color {
+  color: #9356DC;
+}
+.steps .list-item__icon i {
+  font-size: larger;
+}
+.steps .list-item__title {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=styles.css.map */

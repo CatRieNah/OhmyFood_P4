@@ -12,17 +12,15 @@ $light-color:#fff;
 }
 
 h1{
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 700;
 }
-/*Header*/
-header{
-    img{
-        display: block;
-        width: 175px;
-        margin: 15px auto;
-    }
+
+h2{
+    font-size: 24px;
+    margin-bottom: 30px;
 }
+
 
 a{
     color: inherit;
@@ -40,6 +38,16 @@ a{
     font-weight: 500;
     margin-top: 20px;
 }
+
+/*Header*/
+header{
+    img{
+        display: block;
+        width: 175px;
+        margin: 15px auto;
+    }
+}
+
 /****Location***/
 .location{
     background-color: #eaeaea;
@@ -55,6 +63,7 @@ a{
         border: none;
         background-color: #eaeaea;
         font-size: 14px;
+        font-weight: 500;
     }
 }
 
@@ -72,5 +81,62 @@ a{
         font-size: 18px;
         color:$dark-color;
         font-weight: 300;
+    }
+}
+
+/***Fonctionnement*/
+.steps{
+    padding: 50px 20px;
+   
+    ol{
+        list-style: none; /* anule la numérotation par défaut de la balise ol*/
+        counter-reset: steps-counter; /* Réinitialiser le compteur à 0. Cela permet de commencer la numérotation à partir de 1*/
+        padding: 0;
+    }
+}
+
+.steps{
+   .list-item{
+        background-color: $bgcolor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:25px;
+        height: 70px;
+        border-radius: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,.15);
+        margin-bottom: 30px;
+        position: relative;
+
+        &::before{
+            counter-increment: steps-counter; /* Incrementer le compteur de 1 pour chaque élément de la liste*/
+            content: counter(steps-counter);
+            position: absolute;
+            left: -10px;
+            width: 25px;
+            height: 25px;
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            background-color: $primary-color;
+            color: $light-color;
+            border-radius: 50%;
+        }
+
+        &__icon{
+            color: #7e7e7e;
+
+            &--color{
+                color: $primary-color;
+            }
+            
+            i{
+                font-size: larger;
+            }
+        }
+
+        &__title{
+            font-weight: 500;
+        }
     }
 }
