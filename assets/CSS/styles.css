@@ -12,7 +12,7 @@ h1 {
 
 h2 {
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 a {
@@ -30,6 +30,7 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   font-weight: 500;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 /*Header*/
@@ -120,6 +121,65 @@ header img {
 }
 .steps .list-item__title {
   font-weight: 500;
+}
+
+/*Restaurants*/
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 50px 20px;
+}
+
+.card {
+  background-color: #fff;
+  height: 250px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.card-image img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+.card-image p {
+  display: inline-block;
+  padding: 5px;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #99E2D0;
+  position: absolute;
+  right: 15px;
+  top: 20px;
+}
+
+.card-text {
+  padding: 10px;
+}
+.card-text * {
+  margin-bottom: 5px;
+}
+.card-text h3 {
+  font-size: 18px;
+}
+.card-text p {
+  font-size: 17px;
+  font-weight: 300;
+}
+
+.heart-checkbox input {
+  visibility: hidden;
+}
+.heart-checkbox .fa-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 30px;
+  font-weight: 300;
+  font-size: 22px;
 }
 
 /*# sourceMappingURL=styles.css.map */
