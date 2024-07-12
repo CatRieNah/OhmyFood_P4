@@ -21,6 +21,9 @@ a {
 }
 
 .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 220px;
   height: 50px;
   border-radius: 25px;
@@ -157,29 +160,30 @@ header img {
   top: 20px;
 }
 
+.heart-checkbox {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+}
+.heart-checkbox .fa-heart {
+  font-weight: 300;
+  font-size: 25px;
+}
+.heart-checkbox input {
+  visibility: hidden;
+}
+
 .card-text {
   padding: 10px;
 }
-.card-text * {
-  margin-bottom: 5px;
-}
 .card-text h3 {
   font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 5px;
 }
 .card-text p {
   font-size: 17px;
   font-weight: 300;
-}
-
-.heart-checkbox input {
-  visibility: hidden;
-}
-.heart-checkbox .fa-heart {
-  position: absolute;
-  right: 25px;
-  bottom: 30px;
-  font-weight: 300;
-  font-size: 22px;
 }
 
 /* Footer*/

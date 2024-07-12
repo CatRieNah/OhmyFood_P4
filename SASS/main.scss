@@ -28,6 +28,9 @@ a{
 }
 
 .btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 220px;
     height: 50px;
     border-radius: 25px;
@@ -178,37 +181,35 @@ header{
         top: 20px;
     }
 }
+ .heart-checkbox{
+    position: absolute;
+    right:25px;
+    bottom: 25px;
 
-.card-text{
-    padding: 10px;
-
-    *{
-        margin-bottom: 5px;
+    .fa-heart{
+        font-weight: 300;
+        font-size: 25px;
     }
 
+    input{
+        visibility:hidden;
+    }
+ }
+
+ .card-text{
+    padding: 10px;
+    
     h3{
         font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 5px;
     }
 
     p{
         font-size: 17px;
         font-weight: 300;
     }
-}
-.heart-checkbox{
-    input{
-        visibility: hidden;
-    }
-
-    .fa-heart{
-        position: absolute;
-        right: 25px;
-        bottom: 30px;
-        font-weight: 300;
-        font-size: 22px;
-    }
-}
-
+ }
 /* Footer*/
 footer{
     background-color: $dark-color;
