@@ -220,4 +220,14 @@ footer ul li {
   font-weight: 400;
 }
 
+/* Menu Restaurants*/
+header {
+  position: relative;
+}
+header .fa-arrow-left {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+}
+
 /*# sourceMappingURL=styles.css.map */

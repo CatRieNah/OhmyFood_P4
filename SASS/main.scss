@@ -247,4 +247,15 @@ footer{
     font-weight: 400;
 }
 
+/* Menu Restaurants*/
+
+header{
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+    }
+}
+
 
