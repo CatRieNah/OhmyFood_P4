@@ -5,12 +5,7 @@
   font-size: 16px;
 }
 
-h1 {
-  font-size: 28px;
-  font-weight: 700;
-}
-
-h2 {
+.section-title {
   font-size: 24px;
   margin-bottom: 25px;
 }
@@ -70,6 +65,10 @@ header img {
 }
 .intro * {
   margin-bottom: 15px;
+}
+.intro h1 {
+  font-size: 28px;
+  font-weight: 700;
 }
 .intro p {
   font-size: 18px;

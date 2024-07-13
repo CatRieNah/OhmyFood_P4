@@ -11,16 +11,10 @@ $light-color:#fff;
     font-size: 16px;
 }
 
-h1{
-    font-size: 28px;
-    font-weight: 700;
-}
-
-h2{
+.section-title{
     font-size: 24px;
     margin-bottom: 25px;
 }
-
 
 a{
     color: inherit;
@@ -81,6 +75,12 @@ header{
     *{
         margin-bottom: 15px;
     }
+
+    h1{
+        font-size: 28px;
+        font-weight: 700;
+    }
+    
     p{
         font-size: 18px;
         color:$dark-color;
@@ -257,5 +257,3 @@ header{
         left: 15px;
     }
 }
-
-
