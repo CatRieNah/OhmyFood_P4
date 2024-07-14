@@ -25,14 +25,15 @@ a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    padding: 0 25px;
     height: 50px;
     border-radius: 25px;
     background: linear-gradient($secondary-color,$primary-color);
     border: none;
     color:$light-color ;
     box-shadow: 0 4px 10px rgba(0,0,0,.25);
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 17px;
     margin-top: 20px;
     cursor: pointer;
 }
@@ -105,7 +106,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: center;
-        gap:25px;
+        gap:15px;
         height: 70px;
         border-radius: 20px;
         box-shadow: 0 4px 15px rgba(0,0,0,.15);
@@ -129,7 +130,7 @@ header{
 
         &__icon{
             color: #7e7e7e;
-
+            
             &--color{
                 color: $primary-color;
             }
@@ -276,7 +277,7 @@ header{
 
         h1{
             font-family: "Shrikhand", serif;
-            font-size: 28px;
+            font-size: 27px;
             font-weight: 500;
 
             &::after{
@@ -332,7 +333,7 @@ header{
     width: 75%;
 
     h3{
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 500;
         margin-bottom: 5px;
         white-space: nowrap;
@@ -342,6 +343,7 @@ header{
 
     p{
         font-weight: 300; 
+        font-size: 15px;
     }
 
     h3,p {
@@ -382,4 +384,107 @@ header{
     text-align: center;
 }
 
+/*Media queries Desktop*/
+@media (max-width:1440px) and (min-width:1024px){
+    .location{
+        box-shadow: none;
+    }
+
+    .intro{
+        margin-top: 0;
+        padding: 25px;
+
+        h1{
+            font-size: 40px;
+        }
+    }
+
+    .steps{
+        padding: 50px 180px;
+
+        ol{
+            display: flex;
+            justify-content: space-between;
+
+            .list-item{
+                width: 30%;
+                box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    
+                &__icon{
+                    margin-left: 35px;
+                }
+            }
+        }
+    }
+
+    .restaurants{
+        padding: 50px 180px;
+
+        .container-cards{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 25px;
+        }
+    }
+
+    footer{
+        display: flex;
+        gap:75px;
+        flex-direction: row-reverse;
+        padding: 50px 50px 0px 0px;
+        .list-group{
+            display: flex;
+            gap: 50px;
+
+            ul{
+                display: flex;
+                gap: 15px;
+            }
+        }
+    }
+}
+
+/*media queries tablette*/
+@media (max-width:1023.98px) and (min-width:768px){
+    .location{
+        box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    }
+
+    .intro{
+        h1{
+            font-size: 34px;
+        }
+    }
+
+    .steps{
+        padding: 50px 180px ;
+
+    }
+
+    .restaurants{
+        padding: 50px 180px;
+    }
+
+    footer{
+        display: flex;
+        gap:50px;
+        padding: 50px 0px 0px 50px;
+        .list-group{
+            display: flex;
+            gap: 20px;
+
+            ul{
+                display: flex;
+                gap: 15px;
+
+                p{
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+    
 
