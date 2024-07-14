@@ -25,8 +25,9 @@ a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 15px;
     height: 50px;
+    width: 185px;
     border-radius: 25px;
     background: linear-gradient($secondary-color,$primary-color);
     border: none;
@@ -385,6 +386,7 @@ header{
 }
 
 /*Media queries Desktop*/
+/*Page d'acceuil*/
 @media (max-width:1440px) and (min-width:1024px){
     .location{
         box-shadow: none;
@@ -443,6 +445,18 @@ header{
             }
         }
     }
+
+    /*page Menu*/
+    .menu{
+        section{
+            margin:-35px 150px 0px 150px;
+            padding: 50px 180px;
+
+            h1{
+                text-align: center;
+            }
+        }
+    }
 }
 
 /*media queries tablette*/
@@ -481,6 +495,19 @@ header{
                 p{
                     font-size: 15px;
                 }
+            }
+        }
+    }
+
+
+    /*page Menu*/
+    .menu{
+        section{
+            margin:-35px 100px 0px 100px;
+            padding: 50px 100px;
+
+            h1{
+                text-align: center;
             }
         }
     }

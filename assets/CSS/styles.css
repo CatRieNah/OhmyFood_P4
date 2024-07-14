@@ -19,8 +19,9 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0 25px;
+  padding: 0 15px;
   height: 50px;
+  width: 185px;
   border-radius: 25px;
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -336,6 +337,7 @@ header .fa-arrow-left {
 }
 
 /*Media queries Desktop*/
+/*Page d'acceuil*/
 @media (max-width: 1440px) and (min-width: 1024px) {
   .location {
     box-shadow: none;
@@ -384,6 +386,14 @@ header .fa-arrow-left {
     display: flex;
     gap: 15px;
   }
+  /*page Menu*/
+  .menu section {
+    margin: -35px 150px 0px 150px;
+    padding: 50px 180px;
+  }
+  .menu section h1 {
+    text-align: center;
+  }
 }
 /*media queries tablette*/
 @media (max-width: 1023.98px) and (min-width: 768px) {
@@ -414,6 +424,14 @@ header .fa-arrow-left {
   }
   footer .list-group ul p {
     font-size: 15px;
+  }
+  /*page Menu*/
+  .menu section {
+    margin: -35px 100px 0px 100px;
+    padding: 50px 100px;
+  }
+  .menu section h1 {
+    text-align: center;
   }
 }
 
