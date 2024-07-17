@@ -361,6 +361,11 @@ header{
             overflow: hidden;
             position: relative;
             animation: translate-Y 1s ease-in-out forwards;
+            cursor: pointer;
+
+            &:hover button{
+                margin-right: 0;
+            }
 
             &:nth-child(1){
                 animation-delay: 0s;
@@ -416,6 +421,7 @@ header{
         background: $tertiary-color;
         border: none;
         margin-right: -60px;
+        transition: margin-right .3s ease-in-out;
 
         .fa-check{
             padding: 3px;

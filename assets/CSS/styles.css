@@ -313,6 +313,10 @@ header .fa-arrow-left {
   overflow: hidden;
   position: relative;
   animation: translate-Y 1s ease-in-out forwards;
+  cursor: pointer;
+}
+.menu ul li:hover button {
+  margin-right: 0;
 }
 .menu ul li:nth-child(1) {
   animation-delay: 0s;
@@ -361,6 +365,7 @@ header .fa-arrow-left {
   background: #99E2D0;
   border: none;
   margin-right: -60px;
+  transition: margin-right 0.3s ease-in-out;
 }
 .menu button .fa-check {
   padding: 3px;
