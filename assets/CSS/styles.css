@@ -263,7 +263,7 @@ header .fa-arrow-left {
   font-family: "Shrikhand", serif;
   font-size: 27px;
   font-weight: 500;
-  animation: translate-X 3s ease-in-out;
+  animation: translate-X 0.5s;
 }
 .menu section h1:hover::after {
   font-weight: 900;
@@ -277,7 +277,7 @@ header .fa-arrow-left {
   font-family: "Font Awesome 6 Free";
   margin-left: 35px;
   cursor: pointer;
-  transition: font-weight 0s linear, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .menu section article {
   margin-top: 25px;
@@ -286,7 +286,7 @@ header .fa-arrow-left {
 .menu h2 {
   font-weight: 300;
   position: relative;
-  animation: translate-X 3s ease-in-out;
+  animation: translate-X 0.5s ease-in-out;
 }
 .menu h2::after {
   content: "";
@@ -300,7 +300,7 @@ header .fa-arrow-left {
   list-style: none;
   padding: 0;
   margin-top: 25px;
-  animation: translate-Y 2s forwards;
+  animation: translate-Y 0.5s forwards;
 }
 .menu ul li {
   background-color: #fff;
@@ -312,16 +312,16 @@ header .fa-arrow-left {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
-  animation: translate-Y 2s ease-in-out forwards;
+  animation: translate-Y 1s ease-in-out forwards;
 }
 .menu ul li:nth-child(1) {
   animation-delay: 0s;
 }
 .menu ul li:nth-child(2) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .menu ul li:nth-child(3) {
-  animation-delay: 1s;
+  animation-delay: 0.6s;
 }
 
 .menu-description {
@@ -371,7 +371,7 @@ header .fa-arrow-left {
 
 .btn-order {
   text-align: center;
-  animation: translate-X 3s ease-in-out;
+  animation: translate-X 0.5s;
 }
 
 /*Media queries Desktop*/
@@ -549,7 +549,7 @@ header .fa-arrow-left {
 }
 @keyframes invisible {
   to {
-    opacity: 0;
+    visibility: hidden;
   }
 }
 
