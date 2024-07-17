@@ -31,6 +31,11 @@ a {
   font-size: 17px;
   margin-top: 20px;
   cursor: pointer;
+  transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
 }
 
 /*Header*/
@@ -113,6 +118,7 @@ header img {
   background-color: #9356DC;
   color: #fff;
   border-radius: 50%;
+  animation: steps-turn 3s infinite linear;
 }
 .steps .list-item__icon {
   color: #7e7e7e;
@@ -169,6 +175,15 @@ header img {
 .heart-checkbox .fa-heart {
   font-weight: 300;
   font-size: 25px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.heart-checkbox .fa-heart:hover {
+  font-weight: 700;
+  color: transparent;
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 .heart-checkbox input {
   visibility: hidden;
@@ -248,11 +263,21 @@ header .fa-arrow-left {
   font-family: "Shrikhand", serif;
   font-size: 27px;
   font-weight: 500;
+  animation: translate-X 3s ease-in-out;
+}
+.menu section h1:hover::after {
+  font-weight: 900;
+  -webkit-background-clip: text;
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
 }
 .menu section h1::after {
   content: "\f004";
   font-family: "Font Awesome 6 Free";
   margin-left: 35px;
+  cursor: pointer;
+  transition: font-weight 0s linear, color 0.3s ease-in-out;
 }
 .menu section article {
   margin-top: 25px;
@@ -261,6 +286,7 @@ header .fa-arrow-left {
 .menu h2 {
   font-weight: 300;
   position: relative;
+  animation: translate-X 3s ease-in-out;
 }
 .menu h2::after {
   content: "";
@@ -274,6 +300,7 @@ header .fa-arrow-left {
   list-style: none;
   padding: 0;
   margin-top: 25px;
+  animation: translate-Y 2s forwards;
 }
 .menu ul li {
   background-color: #fff;
@@ -285,6 +312,16 @@ header .fa-arrow-left {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   position: relative;
+  animation: translate-Y 2s ease-in-out forwards;
+}
+.menu ul li:nth-child(1) {
+  animation-delay: 0s;
+}
+.menu ul li:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.menu ul li:nth-child(3) {
+  animation-delay: 1s;
 }
 
 .menu-description {
@@ -334,6 +371,7 @@ header .fa-arrow-left {
 
 .btn-order {
   text-align: center;
+  animation: translate-X 3s ease-in-out;
 }
 
 /*Media queries Desktop*/
@@ -432,6 +470,34 @@ header .fa-arrow-left {
   }
   .menu section h1 {
     text-align: center;
+  }
+}
+@keyframes steps-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes translate-X {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes translate-Y {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

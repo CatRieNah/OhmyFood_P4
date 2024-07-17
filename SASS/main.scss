@@ -37,6 +37,15 @@ a{
     font-size: 17px;
     margin-top: 20px;
     cursor: pointer;
+    transition: opacity .3s ease-in-out, box-shadow .3s  ease-in-out;
+    
+
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 4px 15px rgba(0,0,0,.45);
+
+    }
+    
 }
 
 /*Header*/
@@ -127,6 +136,7 @@ header{
             background-color: $primary-color;
             color: $light-color;
             border-radius: 50%;
+            animation: steps-turn 3s infinite linear;
         }
 
         &__icon{
@@ -191,6 +201,19 @@ header{
     .fa-heart{
         font-weight: 300;
         font-size: 25px;
+        cursor: pointer;
+        transition: all .4s ease-in-out ;
+
+        &:hover{
+            font-weight: 700;
+            color: transparent;
+            background: linear-gradient($secondary-color,$primary-color);
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            
+          
+        }
     }
 
     input{
@@ -280,12 +303,22 @@ header{
             font-family: "Shrikhand", serif;
             font-size: 27px;
             font-weight: 500;
+            animation: translate-X 3s ease-in-out;
+
+            &:hover::after{
+                font-weight: 900;
+                -webkit-background-clip: text;
+                background: linear-gradient($secondary-color,$primary-color);
+                color: transparent;
+                background-clip: text;
+            }
 
             &::after{
                 content: "\f004";
                 font-family: 'Font Awesome 6 Free';
                 margin-left: 35px;
-
+                cursor: pointer;
+                transition: font-weight 0s linear, color .3s ease-in-out;
             }
         }
 
@@ -299,6 +332,7 @@ header{
     h2{
         font-weight: 300;
         position:relative;
+        animation: translate-X 3s ease-in-out;
 
         &::after{
             content: "";
@@ -314,18 +348,30 @@ header{
         list-style: none;
         padding: 0;
         margin-top: 25px;
+        animation: translate-Y 2s forwards;
 
        li{
-        background-color: $light-color;
-        border-radius: 15px;
-        margin-bottom: 15px;
-        height: 70px;
-        display: flex;
-        justify-content: space-between;
-        box-shadow: 0 4px 15px rgba(0,0,0,.1);
-        overflow: hidden;
-        position: relative;
-       }
+            background-color: $light-color;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+            overflow: hidden;
+            position: relative;
+            animation: translate-Y 2s ease-in-out forwards;
+
+            &:nth-child(1){
+                animation-delay: 0s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.5s;
+            }
+            &:nth-child(3){
+                animation-delay: 1s;
+            }
+        }
     }
 }
 
@@ -383,6 +429,7 @@ header{
 
 .btn-order{
     text-align: center;
+    animation: translate-X 3s ease-in-out;
 }
 
 /*Media queries Desktop*/
@@ -513,5 +560,36 @@ header{
     }
 }
 
-    
+@keyframes steps-turn{
+    0%{
+        transform: rotate(0deg);
+    }
 
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes translate-X{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes translate-Y{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
