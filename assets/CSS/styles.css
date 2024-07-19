@@ -6,6 +6,7 @@
 }
 
 .section-title {
+  font-family: "" Roboto ", sans-serif";
   font-size: 24px;
   margin-bottom: 25px;
 }
@@ -17,9 +18,8 @@ a {
 
 .btn {
   display: inline-flex;
-  justify-content: center;
   align-items: center;
-  padding: 0 15px;
+  justify-content: center;
   height: 50px;
   width: 185px;
   border-radius: 25px;
@@ -27,9 +27,11 @@ a {
   border: none;
   color: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  font-family: "" Roboto ", sans-serif";
   font-weight: 400;
   font-size: 17px;
   margin-top: 20px;
+  padding: 0 15px;
   cursor: pointer;
   transition: opacity 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -38,35 +40,76 @@ a {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
 }
 
-/*Header*/
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 header img {
   display: block;
   width: 175px;
   margin: 15px auto;
 }
 
+/* Footer*/
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 30px 20px;
+}
+footer h3 {
+  font-family: "Shrikhand,serif";
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer ul li {
+  margin-bottom: 5px;
+  font-family: "" Roboto ", sans-serif";
+  font-weight: 300;
+}
+
+.icon-ustensils {
+  gap: 15px;
+}
+
+.icon-handshake {
+  gap: 10px;
+}
+
+.icon-ustensils, .icon-handshake {
+  display: flex;
+  font-family: "" Roboto ", sans-serif";
+  font-weight: 400;
+}
+
 /****Location***/
 .location {
   background-color: #eaeaea;
+  gap: 17px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 -2px 4px rgba(0, 0, 0, 0.15);
   color: #353535;
 }
 .location input {
   border: none;
   background-color: #eaeaea;
-  font-size: 14px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 500;
+  font-size: 14px;
 }
 
 /* Intro*/
 .intro {
-  padding: 50px 20px;
   margin-top: 4px;
+  padding: 50px 20px;
   background-color: #f6f6f6;
   text-align: center;
 }
@@ -74,13 +117,15 @@ header img {
   margin-bottom: 15px;
 }
 .intro h1 {
-  font-size: 28px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 700;
+  font-size: 28px;
 }
 .intro p {
-  font-size: 18px;
   color: #353535;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 300;
+  font-size: 18px;
 }
 
 /***Fonctionnement*/
@@ -98,27 +143,30 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
   height: 70px;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   margin-bottom: 30px;
+  gap: 15px;
   position: relative;
+  cursor: pointer;
+}
+.steps .list-item:hover i {
+  color: #9356DC;
 }
 .steps .list-item::before {
   counter-increment: steps-counter; /* Incrementer le compteur de 1 pour chaque élément de la liste*/
   content: counter(steps-counter);
   position: absolute;
   left: -10px;
-  width: 25px;
   height: 25px;
+  width: 25px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #9356DC;
   color: #fff;
-  border-radius: 50%;
-  animation: steps-turn 3s infinite linear;
 }
 .steps .list-item__icon {
   color: #7e7e7e;
@@ -127,9 +175,11 @@ header img {
   color: #9356DC;
 }
 .steps .list-item__icon i {
+  font-family: "" Roboto ", sans-serif";
   font-size: larger;
 }
 .steps .list-item__title {
+  font-family: "" Roboto ", sans-serif";
   font-weight: 500;
 }
 
@@ -151,16 +201,15 @@ header img {
 }
 
 .card-image img {
-  width: 100%;
   height: 175px;
-  object-fit: cover;
 }
 .card-image p {
   display: inline-block;
   padding: 5px;
   color: #008766;
-  font-size: 14px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 500;
+  font-size: 14px;
   background-color: #99E2D0;
   position: absolute;
   right: 15px;
@@ -173,12 +222,15 @@ header img {
   bottom: 25px;
 }
 .heart-checkbox .fa-heart {
+  font-family: "" Roboto ", sans-serif";
   font-weight: 300;
   font-size: 25px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
 .heart-checkbox .fa-heart:hover {
+  font-weight: 700;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 700;
   color: transparent;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -193,47 +245,15 @@ header img {
   padding: 10px;
 }
 .card-text h3 {
-  font-size: 18px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 700;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 .card-text p {
+  font-family: "" Roboto ", sans-serif";
+  font-weight: 300;
   font-size: 17px;
-  font-weight: 300;
-}
-
-/* Footer*/
-footer {
-  background-color: #353535;
-  color: #fff;
-  padding: 30px 20px;
-}
-footer h3 {
-  font-family: "Shrikhand", serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 15px;
-}
-footer ul {
-  list-style: none;
-  padding: 0;
-}
-footer ul li {
-  margin-bottom: 5px;
-  font-weight: 300;
-}
-
-.icon-ustensils {
-  gap: 15px;
-}
-
-.icon-handshake {
-  gap: 10px;
-}
-
-.icon-ustensils, .icon-handshake {
-  display: flex;
-  font-weight: 400;
 }
 
 /* Menu Restaurants*/
@@ -247,25 +267,24 @@ header .fa-arrow-left {
 }
 
 .menu img {
-  width: 100%;
-  height: 275px;
-  object-fit: cover;
+  height: 375px;
 }
 
 .menu section {
   background-color: #f6f6f6;
-  padding: 30px 20px;
   border-radius: 35px 35px 0 0;
   margin-top: -50px;
+  padding: 30px 20px;
   position: relative;
 }
 .menu section h1 {
-  font-family: "Shrikhand", serif;
-  font-size: 27px;
+  font-family: "Shrikhand";
   font-weight: 500;
-  animation: translate-X 0.5s;
+  font-size: 27px;
+  animation: translate-X 0.4s linear;
 }
 .menu section h1:hover::after {
+  font-family: "" Roboto ", sans-serif";
   font-weight: 900;
   -webkit-background-clip: text;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -284,9 +303,10 @@ header .fa-arrow-left {
 }
 
 .menu h2 {
+  font-family: "" Roboto ", sans-serif";
   font-weight: 300;
   position: relative;
-  animation: translate-X 0.5s ease-in-out;
+  animation: translate-X 0.5s linear;
 }
 .menu h2::after {
   content: "";
@@ -300,7 +320,7 @@ header .fa-arrow-left {
   list-style: none;
   padding: 0;
   margin-top: 25px;
-  animation: translate-Y 0.5s forwards;
+  animation: translate-Y 0.4s linear forwards;
 }
 .menu ul li {
   background-color: #fff;
@@ -333,14 +353,13 @@ header .fa-arrow-left {
   width: 75%;
 }
 .menu-description h3 {
-  font-size: 17px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 500;
+  font-size: 17px;
   margin-bottom: 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .menu-description p {
+  font-family: "" Roboto ", sans-serif";
   font-weight: 300;
   font-size: 15px;
 }
@@ -352,8 +371,9 @@ header .fa-arrow-left {
 
 .price {
   color: #353535;
-  font-size: 15px;
+  font-family: "" Roboto ", sans-serif";
   font-weight: 700;
+  font-size: 15px;
   position: relative;
   margin-left: auto;
   top: 40px;
@@ -390,6 +410,7 @@ header .fa-arrow-left {
     padding: 25px;
   }
   .intro h1 {
+    font-family: "" Roboto ", sans-serif";
     font-size: 40px;
   }
   .steps {
@@ -401,10 +422,11 @@ header .fa-arrow-left {
   }
   .steps ol .list-item {
     width: 30%;
+    width: 30%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
   .steps ol .list-item__icon {
-    margin-left: 35px;
+    margin: 35px;
   }
   .restaurants {
     padding: 50px 180px;
@@ -417,9 +439,9 @@ header .fa-arrow-left {
   }
   footer {
     display: flex;
-    gap: 75px;
     flex-direction: row-reverse;
-    padding: 50px 50px 0px 0px;
+    padding: 50px 50px 0 0;
+    gap: 75px;
   }
   footer .list-group {
     display: flex;
@@ -431,7 +453,7 @@ header .fa-arrow-left {
   }
   /*page Menu*/
   .menu section {
-    margin: -35px 150px 0px 150px;
+    margin: -35px 150px 0 150px;
     padding: 50px 180px;
   }
   .menu section h1 {
@@ -444,6 +466,7 @@ header .fa-arrow-left {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
   .intro h1 {
+    font-family: "" Roboto ", sans-serif";
     font-size: 34px;
   }
   .steps {
@@ -454,8 +477,8 @@ header .fa-arrow-left {
   }
   footer {
     display: flex;
+    padding: 50px 0 0 50px;
     gap: 50px;
-    padding: 50px 0px 0px 50px;
   }
   footer .list-group {
     display: flex;
@@ -466,17 +489,58 @@ header .fa-arrow-left {
     gap: 15px;
   }
   footer .list-group ul p {
+    font-family: "" Roboto ", sans-serif";
     font-size: 15px;
   }
   /*page Menu*/
   .menu section {
-    margin: -35px 100px 0px 100px;
+    margin: -35px 100px 0 100px;
     padding: 50px 100px;
   }
   .menu section h1 {
     text-align: center;
   }
 }
+/*loader*/
+.loader {
+  background-color: #fff;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  animation: invisible 1s ease-out 3s forwards;
+}
+.loader .letters span {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "" Roboto ", sans-serif";
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+  color: #fff;
+  animation: rotate-span 1s infinite ease-in-out;
+}
+.loader .letters span:nth-child(1) {
+  background-color: #9356DC;
+  animation-delay: 0s;
+}
+.loader .letters span:nth-child(2) {
+  background-color: #FF79DA;
+  animation-delay: 0.3s;
+}
+.loader .letters span:nth-child(3) {
+  background-color: #99E2D0;
+  animation-delay: 0.6s;
+}
+
 @keyframes steps-turn {
   0% {
     transform: rotate(0deg);
@@ -505,45 +569,6 @@ header .fa-arrow-left {
     transform: translateY(0);
   }
 }
-/*loader*/
-.loader {
-  background-color: #fff;
-  height: 100vh;
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0.9;
-  animation: invisible 1s ease-out 3s forwards;
-}
-.loader .letters span {
-  display: inline-flex;
-  width: 50px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
-  font-size: 20px;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 50%;
-  animation: rotate-span 1s infinite ease-in-out;
-}
-.loader .letters span:nth-child(1) {
-  background-color: #9356DC;
-  animation-delay: 0s;
-}
-.loader .letters span:nth-child(2) {
-  background-color: #FF79DA;
-  animation-delay: 0.3s;
-}
-.loader .letters span:nth-child(3) {
-  background-color: #99E2D0;
-  animation-delay: 0.6s;
-}
-
 @keyframes rotate-span {
   from {
     transform: rotate(0deg) scale(0);
