@@ -1,0 +1,127 @@
+@use 'utils/variables' as vars; //as vars alias pour raccourcir les noms de module variables.
+@use 'utils/mixins' as mix;
+
+/*Media queries Desktop*/
+/*Page d'acceuil*/
+@media (max-width:1440px) and (min-width:1024px){
+    .location{
+        box-shadow: none;
+    }
+
+    .intro{
+        margin-top: 0;
+        @include mix.spacing($padding:25px);
+
+        h1{
+            @include mix.font($size:40px);
+        }
+    }
+
+    .steps{
+        @include mix.spacing($padding:50px 180px);
+
+        ol{
+            display: flex;
+            justify-content: space-between;
+
+            .list-item{
+                width: 30%;
+                @include mix.dimensions($width:30%);
+                box-shadow: 0 4px 10px rgba(0,0,0,.15);
+    
+                &__icon{
+                    @include mix.spacing(35px);
+                }
+            }
+        }
+    }
+
+    .restaurants{
+        @include mix.spacing($padding:50px 180px);
+
+        .container-cards{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 100px;
+            row-gap: 25px;
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row-reverse;
+        @include mix.spacing($padding:50px 50px 0 0,$gap:75px);
+        .list-group{
+            display: flex;
+            @include mix.spacing($gap:50px);
+
+            ul{
+                display: flex;
+                @include mix.spacing($gap:15px);
+            }
+        }
+    }
+
+    /*page Menu*/
+    .menu{
+        section{
+            @include mix.spacing($margin:-35px 150px 0 150px,$padding:50px 180px);
+
+            h1{
+                text-align: center;
+            }
+        }
+    }
+}
+
+/*media queries tablette*/
+@media (max-width:1023.98px) and (min-width:768px){
+    .location{
+        box-shadow: 0px 4px 4px rgba(0,0,0,.25);
+    }
+
+    .intro{
+        h1{
+            @include mix.font($size:34px);
+        }
+    }
+
+    .steps{
+        @include mix.spacing($padding:50px 180px);
+    }
+
+    .restaurants{
+        @include mix.spacing($padding:50px 180px);
+    }
+
+    footer{
+        display: flex;
+        @include mix.spacing($gap:50px,$padding:50px 0 0 50px);
+
+        .list-group{
+            display: flex;
+            @include mix.spacing($gap:20px);
+
+            ul{
+                display: flex;
+                @include mix.spacing($gap:15px);
+
+                p{
+                    @include mix.font($size:15px);
+                }
+            }
+        }
+    }
+
+
+    /*page Menu*/
+    .menu{
+        section{
+            @include mix.spacing($margin:-35px 100px 0 100px,$padding:50px 100px);
+
+            h1{
+                text-align: center;
+            }
+        }
+    }
+}

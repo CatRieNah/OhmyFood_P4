@@ -1,0 +1,42 @@
+@use 'utils/variables' as vars; //as vars alias pour raccourcir les noms de module variables.
+@use 'utils/mixins' as mix;
+
+*{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+.section-title{
+    @include mix.font($size:24px);
+    @include mix.spacing($margin-bottom:25px);
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.btn{
+    @include mix.center($display:inline-flex);
+    @include mix.dimensions($height:50px,$width:185px,$border-radius:25px);
+    background: linear-gradient(vars.$secondary-color,vars.$primary-color);
+    border: none;
+    color:vars.$light-color ;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    @include mix.font($size:17px,$weight:400);
+    @include mix.spacing($padding:0 15px,$margin-top:20px);
+    cursor: pointer;
+    transition: opacity .3s ease-in-out, box-shadow .3s  ease-in-out;
+    
+
+    &:hover{
+        opacity: 0.8;
+        box-shadow: 0 4px 15px rgba(0,0,0,.45);
+    }
+}
+
+img{
+    @include mix.dimensions($width:100%);
+    object-fit: cover;
+}

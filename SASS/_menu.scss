@@ -1,0 +1,158 @@
+@use 'utils/variables' as vars; //as vars alias pour raccourcir les noms de module variables.
+@use 'utils/mixins' as mix;
+
+
+/* Menu Restaurants*/
+
+header{
+    position: relative;
+    .fa-arrow-left{
+        position: absolute;
+        bottom: 5px;
+        left: 15px;
+    }
+}
+
+.menu{
+    img{
+        @include mix.dimensions($height:375px);
+    }
+}
+
+.menu{
+    section{
+        background-color:vars.$bgcolor;
+        border-radius: 35px 35px 0 0;
+        @include mix.spacing($padding:30px 20px,$margin-top:-50px);
+        position: relative;
+
+        h1{
+            @include mix.font($size:27px,$weight:500,$family:"Shrikhand");
+            animation: translate-X .4s linear;
+
+            &:hover::after{
+                @include mix.font($weight:900);
+                -webkit-background-clip: text;
+                background: linear-gradient(vars.$secondary-color,vars.$primary-color);
+                color: transparent;
+                background-clip: text;
+            }
+
+            &::after{
+                content: "\f004";
+                @include mix.font('Font Awesome 6 Free');
+                @include mix.spacing($margin-left:35px);
+                cursor: pointer;
+                transition:color .3s ease-in-out ;
+            }
+        }
+
+        article{
+            @include mix.spacing($margin-top:25px);
+        }
+    }
+}
+
+.menu{
+    h2{
+        @include mix.font($weight:300);
+        position:relative;
+        animation: translate-X .5s linear;
+
+        &::after{
+            content: "";
+            border: 2px solid vars.$tertiary-color;
+            @include mix.dimensions($width:40px);
+            position: absolute;
+            left: 0;
+            top: 25px;
+        }
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        @include mix.spacing($margin-top:25px);
+        animation: translate-Y .4s linear forwards;
+
+       li{
+            background-color: vars.$light-color;
+            border-radius: 15px;
+            @include mix.spacing($margin-bottom:15px);
+            @include mix.dimensions($height:70px);
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+            overflow: hidden;
+            position: relative;
+            animation: translate-Y 1s ease-in-out forwards;
+            cursor: pointer;
+
+            &:hover button{
+                margin-right: 0;
+            }
+
+            &:nth-child(1){
+                animation-delay: 0s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.3s;
+            }
+            &:nth-child(3){
+                animation-delay: 0.6s;
+            }
+        }
+    }
+}
+
+.menu-description{
+    @include mix.spacing($padding:15px);
+    @include mix.dimensions($width:75%);
+
+    h3{
+        @include mix.font($size:17px,$weight:500);
+        @include mix.spacing($margin-bottom:5px);
+    }
+
+    p{
+        @include mix.font($weight:300,$size:15px);
+    }
+
+    h3,p {
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+.price{
+    color:vars.$dark-color;
+    @include mix.font($size:15px,$weight:700);
+    position: relative;
+    @include mix.spacing($margin-left:auto);
+    top: 40px;
+    right: 20px;
+}
+
+.menu{
+    button{
+        @include mix.dimensions($width:60px);
+        background:vars.$tertiary-color;
+        border: none;
+        @include mix.spacing($margin-right:-60px);
+        transition: margin-right .3s ease-in-out;
+
+        .fa-check{
+            @include mix.spacing($padding:3px);
+            background-color:vars.$light-color;
+            @include mix.dimensions($border-radius:50%);
+            color:vars.$tertiary-color;
+        }
+
+    }
+}
+
+.btn-order{
+    text-align: center;
+    animation: translate-X .5s ;
+}

@@ -1,0 +1,38 @@
+@use 'utils/variables' as vars; //as vars alias pour raccourcir les noms de module variables.
+@use 'utils/mixins' as mix;
+
+/* Footer*/
+footer{
+    background-color:vars.$dark-color;
+    color:vars.$light-color;
+    @include mix.spacing($padding:30px 20px);
+
+    h3{
+        @include mix.font($family:"Shrikhand,serif",$size:18px,$weight:400);
+        @include mix.spacing($margin-bottom:15px);
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+
+        li{
+            @include mix.spacing($margin-bottom:5px);
+            @include mix.font($weight:300);
+        }
+    }
+}
+
+.icon-ustensils{
+    @include mix.spacing($gap:15px);
+}
+
+.icon-handshake{
+    @include mix.spacing($gap:10px);
+}
+
+.icon-ustensils, .icon-handshake{
+    display: flex;
+    @include mix.font($weight:400);
+}
+

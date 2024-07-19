@@ -1,0 +1,10 @@
+@use 'utils/variables' as vars; //as vars alias pour raccourcir les noms de module variables.
+@use 'utils/mixins' as mix;
+
+header{
+    img{
+        display: block;
+        @include mix.dimensions($width:175px);
+        @include mix.spacing($margin:15px auto);
+    }
+}
