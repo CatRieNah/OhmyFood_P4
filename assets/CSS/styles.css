@@ -512,7 +512,7 @@ header .fa-arrow-left {
   align-items: center;
   justify-content: center;
   opacity: 0.9;
-  animation: invisible 1s ease-out 3s forwards;
+  animation: hidden 1s ease-in-out forwards;
 }
 .loader .letters span {
   height: 50px;
@@ -577,7 +577,7 @@ header .fa-arrow-left {
     transform: rotate(360deg) scale(1);
   }
 }
-@keyframes invisible {
+@keyframes hidden {
   to {
     visibility: hidden;
   }
