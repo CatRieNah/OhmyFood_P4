@@ -8,7 +8,7 @@ footer{
     @include mix.spacing($padding:30px 20px);
 
     h3{
-        @include mix.font($family:"Shrikhand,serif",$size:18px,$weight:400);
+        @include mix.font($size:18px,$weight:500,$family:"Shrikhand");
         @include mix.spacing($margin-bottom:15px);
     }
 
